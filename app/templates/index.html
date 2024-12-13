@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Language Data Collector</title>
+    <style>
+        /* Basic styling for layout */
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        video, img { border: 1px solid black; width: 640px; height: 480px; }
+        select, button { padding: 10px; margin: 10px; }
+        #annotated-container, #original-container { margin-top: 20px; display: none; }
+        #spinner { display: none; margin-top: 20px; font-weight: bold; }
+        #controls { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Sign Language Data Collector</h1>
+
+    <div>
+        <label for="sign-select">Select Sign:</label>
+        <select id="sign-select">
+            <option value="" disabled selected>Select a sign</option>
+            <!-- Dynamically populate signs -->
+            {% for sign in signs %}
+            <option value="{{ sign }}">{{ sign }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div>
+        <video id="video" autoplay></video>
+    </div>
+
+    <div>
+        <button id="capture-btn">Capture Image</button>
+        <button id="record-btn">Start Recording</button>
+    </div>
+
+    <div id="spinner">
+        <p>Processing...</p>
+    </div>
+
+    <div id="original-container">
+        <h2>Original Image:</h2>
+        <img id="original-image" src="" alt="Original Image will appear here">
+    </div>
+
+    <div id="annotated-container">
+        <h2>Annotated Image:</h2>
+        <img id="annotated-image" src="" alt="Annotated Image will appear here">
+        <div id="controls">
+            <button id="save-btn">Save</button>
+            <button id="retake-btn">Retake</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
