@@ -19,7 +19,7 @@ def test_index(client):
     """Test the main index route."""
     response = client.get('/')
     assert response.status_code == 200
-    assert b'Sign Language Data Collector' in response.data  # Adjust this based on actual HTML content
+    assert b'Sign Language Data Collector' in response.data
 
 
 def test_capture_image(client):
@@ -50,7 +50,7 @@ def test_save_image(client):
     assert response.status_code == 200
     response_json = json.loads(response.data)
     assert 'message' in response_json
-    assert 'Video saved' not in response_json  # Because this is an image save, not video
+    assert 'Video saved' not in response_json
 
 
 def test_capture_video(client):
