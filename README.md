@@ -1,5 +1,5 @@
 # Hand Gesture dataset gathering with Flask
-
+- Video demonstration: https://drive.google.com/file/d/1aSOf58w-SnEg6D5YAXMH5tX49BO_fb97/view?usp=sharing
 # **Project Overview**
 This project is a simple Flask-based web application for capturing and processing hand gestures using **Mediapipe**. It allows users to upload images or videos, detect hand gestures, and save them into a dataset for further processing or model training. The system also visualizes the detected hand landmarks on images.
 
