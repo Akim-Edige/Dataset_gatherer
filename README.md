@@ -71,12 +71,12 @@ Make sure you have the following installed on your system:
    python3 -m venv venv
    source venv/bin/activate
    ```
-4. ** Install the requirements**
+4. **Install the requirements**
    ```bash
    pip install -r requirements.txt
    ```
 5. **Run the application**
-  ```bash
+   ```bash
    python3 app.py
    ```
 
