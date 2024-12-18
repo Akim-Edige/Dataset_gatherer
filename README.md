@@ -7,7 +7,7 @@ This project is a simple Flask-based web application for capturing and processin
 
 ## **Features**
 
-### **Image Capturing** ###:
+### **Image Capturing**:
 - Review and retake the taken image
 - Automatically annotate the image, and write coordinates of points in a json file.
 - Writes metadata.csv with file name, sign and timestamp
@@ -31,11 +31,13 @@ project/
 │   ├── templates/              # HTML files (index.html)
 │   └── static/                 # Static files (JS)
 │
+├── dataset/                    # Image and video will be saved here
+│      
 ├── tests/
 │   ├── __init__.py
 │   ├── sample_photo.txt
 │   ├── sample_video.txt
-│   ├── test_routes.py
+│   └── test_routes.py
 │
 ├── run.py                      # Main entry point to start the app
 └── requirements.txt            # Project dependencies
@@ -75,7 +77,7 @@ Make sure you have the following installed on your system:
    ```
 5. **Run the application**
   ```bash
-  python3 app.py
+   python3 app.py
    ```
 
 
